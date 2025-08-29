@@ -54,7 +54,7 @@
         </div>
         <div class="document-info">
           <h4 class="document-name">{{ doc.name }}</h4>
-          <p class="document-size">{{ doc.size }}</p>
+          <p class="document-size">{{ doc.size }} Мб</p>
         </div>
       </li>
     </ul>
@@ -75,7 +75,7 @@
     margin-bottom: 1rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    background-color: white;
+    background-color: var(--white-color);
   }
 
   .document-item:hover {
@@ -84,15 +84,16 @@
 
   .document-item.selected {
     background-color: var(--selection-color);
-    color: white;
+    color: var(--white-color);
   }
 
   .document-item.selected .document-thumbnail {
     border-right: 1px solid var(--selection-color);
   }
 
-  .document-item.selected .document-name {
-    color: white;
+  .document-item.selected .document-name,
+  .document-item.selected .document-size {
+    color: var(--white-color);
   }
 
   .document-thumbnail {
@@ -119,6 +120,9 @@
 
   .document-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
   }
 
   .document-name {

@@ -8,6 +8,8 @@
   --primary-text-color: #000000;
   --secondary-text-color: #6c757d;
   --error-color: #dc3545;
+  --error-border-color: #f5c6cb;
+  --error-bg-color: #f8d7da;
   --selection-color: #0d6efd;
   --white-color: #ffffff;
 }

@@ -14,8 +14,8 @@
   .error-message {
     color: var(--error-color);
     padding: 0.75rem;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
+    background-color: var(--error-bg-color);
+    border: 1px solid var(--error-border-color);
     border-radius: 6px;
     margin: 1rem 0;
   }

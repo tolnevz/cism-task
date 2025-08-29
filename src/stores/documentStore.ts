@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import type { Document } from '@/models';
 import { useHttpService } from '@/composables/useHttpService';
-import { downloadDocument } from '@/helper/helper';
+import { downloadDocument, generateRandomNumber } from '@/helper/helper';
 
 interface State {
   documents: Document[];
@@ -46,7 +46,8 @@ export const useDocumentStore = defineStore('document', {
           this.error = response.error.toString();
           this.documents = [];
         } else {
-          this.documents = response.data || [];
+          const transformedData = (response.data || []).map((doc) => ({ ...doc, size: generateRandomNumber() }));
+          this.documents = transformedData;
         }
       } catch (error) {
         this.error = `Failed to load documents. ${error}`;

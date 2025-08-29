@@ -12,3 +12,7 @@ export const downloadDocument = async (doc: Document, filename: string): Promise
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 };
+
+export const generateRandomNumber = (): number => {
+  return Math.floor(Math.random() * 19) + 2;
+};
