@@ -2,6 +2,8 @@
 
 Vue 3 приложение с Composition API и TypeScript для управления документами.
 
+Демо - [https://gleeful-taiyaki-4f678c.netlify.app/](https://gleeful-taiyaki-4f678c.netlify.app/)
+
 ## Описание
 
 Приложение позволяет:
